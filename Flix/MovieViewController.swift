@@ -14,8 +14,11 @@ class MovieViewController: UIViewController, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
     
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     override func viewDidLoad() {
+        activityIndicator.startAnimating()
         super.viewDidLoad()
+        
         tableView.dataSource = self
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(refreshControlAction(_:)), for: UIControlEvents.valueChanged)
@@ -40,7 +43,7 @@ class MovieViewController: UIViewController, UITableViewDataSource {
            
         }
         task.resume()
-        
+        activityIndicator.stopAnimating()
         // Do any additional setup after loading the view.
     }
     
