@@ -97,6 +97,8 @@ return movies.count    }
         let baseURLString = "https://image.tmdb.org/t/p/w500"
         let posterURL = URL(string : baseURLString + posterPathString)!
         cell.movieImage.af_setImage(withURL: posterURL)
+        
+
         return cell
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
