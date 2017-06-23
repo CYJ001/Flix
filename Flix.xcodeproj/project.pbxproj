@@ -20,6 +20,7 @@
 		BF01A8DD1EFB4B2A00D50A31 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF01A8DC1EFB4B2A00D50A31 /* DetailViewController.swift */; };
 		BF2ED4811EFDBBAB007762C9 /* PosterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2ED4801EFDBBAB007762C9 /* PosterCell.swift */; };
 		BF2ED4831EFDBC3F007762C9 /* SuperheroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2ED4821EFDBC3F007762C9 /* SuperheroViewController.swift */; };
+		BF2ED4851EFDCFFD007762C9 /* DetailSuperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2ED4841EFDCFFD007762C9 /* DetailSuperViewController.swift */; };
 		F0A7E150B81B17DF6C198F05 /* Pods_FlixUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 508DBE81A20B2D3F1BD03838 /* Pods_FlixUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +67,7 @@
 		BF01A8DC1EFB4B2A00D50A31 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		BF2ED4801EFDBBAB007762C9 /* PosterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PosterCell.swift; sourceTree = "<group>"; };
 		BF2ED4821EFDBC3F007762C9 /* SuperheroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuperheroViewController.swift; sourceTree = "<group>"; };
+		BF2ED4841EFDCFFD007762C9 /* DetailSuperViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailSuperViewController.swift; sourceTree = "<group>"; };
 		FD54359EC5232C7D5BD752ED /* Pods_Flix.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Flix.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -180,6 +182,7 @@
 				BF01A8D51EFB151500D50A31 /* MovieViewController.swift */,
 				BF01A8DC1EFB4B2A00D50A31 /* DetailViewController.swift */,
 				BF2ED4821EFDBC3F007762C9 /* SuperheroViewController.swift */,
+				BF2ED4841EFDCFFD007762C9 /* DetailSuperViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -480,6 +483,7 @@
 				BF01A8D61EFB151500D50A31 /* MovieViewController.swift in Sources */,
 				BF01A8D81EFB2F7A00D50A31 /* MovieCell.swift in Sources */,
 				BF01A8DD1EFB4B2A00D50A31 /* DetailViewController.swift in Sources */,
+				BF2ED4851EFDCFFD007762C9 /* DetailSuperViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
