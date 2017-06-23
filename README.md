@@ -1,6 +1,6 @@
 # Project 2 - Flix
 
-Flix is a movies app using the [The Movie Database API](http://docs.themoviedb.apiary.io/#).
+Flix is a movies app using the [The Movie Database API](http://docs.themoviedb.apiary.io/api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed).
 
 Time spent: 7 hours spent in total
 
@@ -15,7 +15,7 @@ The following **required** functionality is complete:
 
 The following **optional** features are implemented:
 
-- [ ] User sees an error message when there's a networking error.
+- [x] User sees an error message when there's a networking error.
 - [ ] Movies are displayed using a CollectionView instead of a TableView.
 - [ ] User can search for a movie.
 - [ ] All images fade in as they are loading.

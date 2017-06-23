@@ -30,6 +30,16 @@ class MovieViewController: UIViewController, UITableViewDataSource {
         let task = session.dataTask(with: request){(data, response, error) in
             if let error = error{
                 print(error.localizedDescription)
+                let alertController = UIAlertController(title: "Cannot get Movies", message: "The internet connection appears to be offline", preferredStyle: .alert)
+                // create an OK action
+                let OKAction = UIAlertAction(title: "OK", style: .default) { (action) in
+                    // handle response here.
+                }
+                // add the OK action to the alert controller
+                alertController.addAction(OKAction)
+                self.present(alertController, animated: true)
+                    
+                
                 
             }
             else if let data = data{
@@ -55,6 +65,8 @@ func refreshControlAction(_ refreshControl: UIRefreshControl) {
     let task = session.dataTask(with: request){(data, response, error) in
         if let error = error{
             print(error.localizedDescription)
+            let alertController = UIAlertController(title: "Title", message: "Message", preferredStyle: .alert)
+            self.present(alertController, animated: true)
             
         }
         else if let data = data{
