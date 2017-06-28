@@ -15,6 +15,7 @@ class DetailSuperViewController: UIViewController {
     @IBOutlet weak var posterImageView: UIImageView!
     @IBOutlet weak var overviewLabel: UILabel!
     @IBOutlet weak var releaseLabel: UILabel!
+    var trailers : [[String : Any]] = []
      var movie : [String : Any]?
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +37,52 @@ class DetailSuperViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    
+    /*override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let movie = movie{
+            
+        let id = movie["id"] as! Int
+            let urlString =  "https://api.themoviedb.org/3/movie/" + String(id) + "/videos?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed&language=en-US"
+            let url = URL(string: urlString)!
+            let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
+            let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
+            let task = session.dataTask(with: request){(data, response, error) in
+                if let error = error{
+                    print(error.localizedDescription)
+                    let alertController = UIAlertController(title: "Title", message: "Message", preferredStyle: .alert)
+                    self.present(alertController, animated: true)
+                    
+                }
+                else if let data = data{
+                    let dataDict = try!JSONSerialization.jsonObject(with: data, options: []) as! [String : Any]
+                    let trailers = dataDict["results"] as! [[String : Any]]
+                    
+                    //self.trailers = trailers
+                    //let mainTrailer = trailers[0]
+let key = trailers[0]["key"] as! String
+                    print("hi")
+                    print(key)
+                    let youtubeURL = "https://www.youtube.com/watch?v=" + key
+                    let trailerViewController = segue.destination as! WebViewController
+                    trailerViewController.url = youtubeURL
+                    print(youtubeURL)
+                }
+               //self.collectionView.reloadData()
+                
+                //refreshControl.endRefreshing()
+            }
+            task.resume()
+
+            
+        
+       /* let cell = sender as! UICollectionViewCell
+        //if let indexPath = collectionView.indexPath(for: cell){
+            //let  movie = movies[indexPath.row]
+            let webViewController = segue.destination as! WebViewController
+            webViewController.movie = movie*/
+        }
+        }
+ */
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

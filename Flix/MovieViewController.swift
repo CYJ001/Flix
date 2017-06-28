@@ -18,7 +18,8 @@ class MovieViewController: UIViewController, UITableViewDataSource {
     override func viewDidLoad() {
         activityIndicator.startAnimating()
         super.viewDidLoad()
-        
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 50
         tableView.dataSource = self
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(refreshControlAction(_:)), for: UIControlEvents.valueChanged)
